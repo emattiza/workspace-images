@@ -13,8 +13,8 @@ readonly REPO="localhost:5000/dazzle"
 
 function usage() {
 	cat <<EOF
-Usage: ./dazzle-up.sh [OPTION]...
-Example: ./dazzle-up.sh  -c lang-c -c dep-cacert-update -n mychangecombo
+Usage: ./build-chunk.sh [OPTION]...
+Example: ./build-chunk.sh  -c lang-c -c dep-cacert-update -n mychangecombo
 Options for build:
   -h, --help      Display this help
   -c, --chunk     Chunk to build, You can build multiple chunks: -c chunk1 -c chunk2. If no chunks are supplied then build using existing config
@@ -85,7 +85,7 @@ while true; do
 		;;
 	*)
 		echo Error: unknown flag "$1"
-		echo "${YELLOW}Run 'dazzle-up.sh --help' for usage.${NC}"
+		echo "${YELLOW}Run 'build-chunk.sh --help' for usage.${NC}"
 		exit 1
 		;;
 	esac
